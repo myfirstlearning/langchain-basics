@@ -30,7 +30,6 @@ prompt_template_one = PromptTemplate.from_template(
     """
 )
 
-
 ## Simpler way to create PromptTemplate in newer LangChain versions
 prompt_template_smp = PromptTemplate(
     template="""You are an expert in traditional cuisines.
