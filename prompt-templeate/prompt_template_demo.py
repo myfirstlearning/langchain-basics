@@ -14,10 +14,11 @@ llm = ChatOpenAI(model="gpt-4o", api_key=OPEN_API_KEY)
 
 
 prompt_template = PromptTemplate(
-    input_variables=["country"], ##Optional
+    input_variables=["country", "no_of_paragraphs", "language"], ##Optional
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
     Answer the question: What is a traditional dish from {country}?
+    Answer in {no_of_paragraphs} paragraphs in {language}.
     """
 )
 
@@ -27,6 +28,7 @@ prompt_template_one = PromptTemplate.from_template(
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
     Answer the question: What is a traditional dish from {country}?
+      Answer in {no_of_paragraphs} paragraphs in {language}.
     """
 )
 
@@ -35,16 +37,20 @@ prompt_template_smp = PromptTemplate(
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
     Answer the question: What is a traditional dish from {country}?
+    Answer in {no_of_paragraphs} paragraphs in {language}.
     """
 )
 
 st.title("Cuisine Info")
 
 country = st.text_input("Enter the country:")
+no_of_paragraphs = st.number_input("Number of paragraphs:", min_value=1, max_value=5)
+language = st.selectbox("Select language:", ["English", "French", "Spanish", "Hindi", "Chinese", "German"])
+
 
 if country:
     with st.spinner(f"Finding traditional dishes from {country}..."):
-         response = llm.invoke(prompt_template_smp.format(country=country))
+         response = llm.invoke(prompt_template_smp.format(country=country,no_of_paragraphs=no_of_paragraphs,language=language))
     st.write(response.content)
 
 
