@@ -13,7 +13,7 @@ OPEN_API_KEY = os.getenv("OPENAI_API_KEY")  # Ensure the OpenAI API key is set i
 llm = ChatOpenAI(model="gpt-4o", api_key=OPEN_API_KEY)
 
 ## Simpler way to create PromptTemplate in newer LangChain versions
-prompt_template_smp = PromptTemplate(
+prompt_template = PromptTemplate(
     template="""Welcome o the {city} travel guide!
     If you're visiting in {month}, here's what you can do:
     1. Must-visit attractions:
@@ -34,5 +34,5 @@ language = st.selectbox("Select language:", ["English", "French", "Spanish", "Hi
 
 if city and month and budget and language:
     with st.spinner(f"Finding travel plan for {city}..."):
-         response = llm.invoke(prompt_template_smp.format(city=city,month=month,budget=budget,language=language))
+         response = llm.invoke(prompt_template.format(city=city,month=month,budget=budget,language=language))
     st.write(response.content)
