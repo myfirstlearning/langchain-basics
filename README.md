@@ -84,6 +84,18 @@ chmod +x run.sh
 # To run the travel guide Llama demo:
 ./run.sh travel-llama
 
+# To run the LCEL demo:
+./run.sh lcel
+
+# To run the sequential chain demo:
+./run.sh sequential
+
+# To run the simple sequential chain demo:
+./run.sh simple-sequential
+
+# To run the multiple LLMs demo:
+./run.sh multiple-llms
+
 # To run the prompt template demo:
 ./run.sh prompt
 
@@ -106,6 +118,10 @@ python models-demo/llama_demo.py      # Llama model demo
 streamlit run streamlit-demo/streamlit_demo.py  # Web interface
 python app-demo/travel_guide_demo.py  # Travel guide demo
 python app-demo/travel_guide_llama_demo.py  # Travel guide Llama demo
+python chains-demo/lcel_demo.py  # LCEL demo
+streamlit run chains-demo/sequential_chain_demo.py  # Sequential chain demo
+python chains-demo/simple_sequential_chain_demo.py  # Simple sequential chain demo
+python multiple-llms/multiple_llms_demo.py  # Multiple LLMs demo
 python prompt-templeate/prompt_template_demo.py  # Prompt template demo
 python api-test/api_key_test.py    # API key test
 python main.py            # Basic example
@@ -122,6 +138,10 @@ python main.py            # Basic example
 - `streamlit-demo/streamlit_demo.py` - Web interface using Streamlit
 - `app-demo/travel_guide_demo.py` - Travel guide application demo
 - `app-demo/travel_guide_llama_demo.py` - Travel guide application with Llama
+- `chains-demo/lcel_demo.py` - LCEL demo
+- `chains-demo/sequential_chain_demo.py` - Sequential chain demo
+- `chains-demo/simple_sequential_chain_demo.py` - Simple sequential chain demo
+- `multiple-llms/multiple_llms_demo.py` - Multiple LLMs demo
 - `prompt-templeate/prompt_template_demo.py` - Prompt template demonstration
 - `api-test/api_key_test.py` - API key testing utility
 - `main.py` - Basic Python script template

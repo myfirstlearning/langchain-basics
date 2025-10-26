@@ -28,6 +28,18 @@ case "$1" in
     "travel-llama")
         python app-demo/travel_guide_llama_demo.py
         ;;
+    "lcel")
+        python chains-demo/lcel_demo.py
+        ;;
+    "sequential")
+        streamlit run chains-demo/sequential_chain_demo.py
+        ;;
+    "simple-sequential")
+        python chains-demo/simple_sequential_chain_demo.py
+        ;;
+    "multiple-llms")
+        python multiple-llms/multiple_llms_demo.py
+        ;;
     "prompt")
         python prompt-templeate/prompt_template_demo.py
         ;;
@@ -38,6 +50,6 @@ case "$1" in
         python main.py
         ;;
     *)
-        echo "Usage: ./run.sh [openai|gemma|google|claude|grok|llama|streamlit|travel|travel-llama|prompt|apitest|main]"
+        echo "Usage: ./run.sh [openai|gemma|google|claude|grok|llama|streamlit|travel|travel-llama|lcel|sequential|simple-sequential|multiple-llms|prompt|apitest|main]"
         ;;
 esac
