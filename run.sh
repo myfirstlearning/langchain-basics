@@ -10,8 +10,23 @@ case "$1" in
     "google")
         python models-demo/google_gemini_demo.py
         ;;
+    "claude")
+        python models-demo/anthropic_claude_ai.py
+        ;;
+    "grok")
+        python models-demo/grok_xai_demo.py
+        ;;
+    "llama")
+        python models-demo/llama_demo.py
+        ;;
     "streamlit")
-        streamlit run stramlit-demo/streamlit_demo.py
+        streamlit run streamlit-demo/streamlit_demo.py
+        ;;
+    "travel")
+        python app-demo/travel_guide_demo.py
+        ;;
+    "travel-llama")
+        python app-demo/travel_guide_llama_demo.py
         ;;
     "prompt")
         python prompt-templeate/prompt_template_demo.py
@@ -23,6 +38,6 @@ case "$1" in
         python main.py
         ;;
     *)
-        echo "Usage: ./run.sh [openai|gemma|google|streamlit|prompt|apitest|main]"
+        echo "Usage: ./run.sh [openai|gemma|google|claude|grok|llama|streamlit|travel|travel-llama|prompt|apitest|main]"
         ;;
 esac

@@ -17,6 +17,8 @@ prompt_template = PromptTemplate(
     input_variables=["country", "no_of_paragraphs", "language"], ##Optional
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
+    Avoid giving information fictional places. If the country is fictional or 
+    non-existent answer: I don't know.
     Answer the question: What is a traditional dish from {country}?
     Answer in {no_of_paragraphs} paragraphs in {language}.
     """
@@ -27,6 +29,8 @@ prompt_template = PromptTemplate(
 prompt_template_one = PromptTemplate.from_template(
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
+    Avoid giving information fictional places. If the country is fictional or 
+    non-existent answer: I don't know.
     Answer the question: What is a traditional dish from {country}?
       Answer in {no_of_paragraphs} paragraphs in {language}.
     """
@@ -36,6 +40,8 @@ prompt_template_one = PromptTemplate.from_template(
 prompt_template_smp = PromptTemplate(
     template="""You are an expert in traditional cuisines.
     You provide information about a specific dish from a specific country.
+    Avoid giving information fictional places. If the country is fictional or 
+    non-existent answer: I don't know.
     Answer the question: What is a traditional dish from {country}?
     Answer in {no_of_paragraphs} paragraphs in {language}.
     """

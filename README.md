@@ -66,8 +66,23 @@ chmod +x run.sh
 # To run the Google Gemini demo:
 ./run.sh google
 
+# To run the Claude demo:
+./run.sh claude
+
+# To run the Grok demo:
+./run.sh grok
+
+# To run the Llama demo:
+./run.sh llama
+
 # To run the Streamlit demo:
 ./run.sh streamlit
+
+# To run the travel guide demo:
+./run.sh travel
+
+# To run the travel guide Llama demo:
+./run.sh travel-llama
 
 # To run the prompt template demo:
 ./run.sh prompt
@@ -85,7 +100,12 @@ Alternatively, run demos directly:
 python models-demo/openai_demo.py     # OpenAI GPT-4 chat demo
 python models-demo/gemma_demo.py      # Local Gemma model demo
 python models-demo/google_gemini_demo.py  # Google Gemini model demo
-streamlit run stramlit-demo/streamlit_demo.py  # Web interface
+python models-demo/anthropic_claude_ai.py  # Anthropic Claude demo
+python models-demo/grok_xai_demo.py   # Grok xAI demo
+python models-demo/llama_demo.py      # Llama model demo
+streamlit run streamlit-demo/streamlit_demo.py  # Web interface
+python app-demo/travel_guide_demo.py  # Travel guide demo
+python app-demo/travel_guide_llama_demo.py  # Travel guide Llama demo
 python prompt-templeate/prompt_template_demo.py  # Prompt template demo
 python api-test/api_key_test.py    # API key test
 python main.py            # Basic example
@@ -96,7 +116,12 @@ python main.py            # Basic example
 - `models-demo/openai_demo.py` - OpenAI GPT-4 integration example
 - `models-demo/gemma_demo.py` - Local Ollama Gemma model example
 - `models-demo/google_gemini_demo.py` - Google Gemini model integration example
-- `stramlit-demo/streamlit_demo.py` - Web interface using Streamlit
+- `models-demo/anthropic_claude_ai.py` - Anthropic Claude model integration example
+- `models-demo/grok_xai_demo.py` - Grok xAI model integration example
+- `models-demo/llama_demo.py` - Llama model integration example
+- `streamlit-demo/streamlit_demo.py` - Web interface using Streamlit
+- `app-demo/travel_guide_demo.py` - Travel guide application demo
+- `app-demo/travel_guide_llama_demo.py` - Travel guide application with Llama
 - `prompt-templeate/prompt_template_demo.py` - Prompt template demonstration
 - `api-test/api_key_test.py` - API key testing utility
 - `main.py` - Basic Python script template
