@@ -17,7 +17,7 @@ cd langchain-basics
 
 2. Install required dependencies:
 ```bash
-pip install langchain-openai langchain-ollama langchain-core streamlit
+pip install langchain-openai langchain-ollama langchain-core langchain-google-genai langchain-anthropic langchain-community streamlit
 ```
 
 ## Setup
